@@ -18,11 +18,9 @@
             <p>
                The academic program of the weekend school is spread in two semesters. 
                 The first semester start from first of september to fifteenth of december and the second semester starts from fifth of Junuary to twentieth of May. Each period of class is 45 minutes duration. <br />
-                The parent needs to create an account with the weekend school to register their cheldreen. 
-                By clicking on the login option abobe from the menu, on the login page you have a registration link available to register the students. 
-                After creating the account, the parent will use a username and password to access their account. 
-                A student registration form is used only one time period. After entering all the information requested by the form. 
-                All the future access to the account will on will a</p>
+                The parent needs to create an account with the weekend school to register their childreen. 
+                By clicking on the login option from the top menu you can login to your existing account or you can create a new account if you do not have one. 
+               </p>
            
         </div>
         <div class="col-md-3">
@@ -52,65 +50,59 @@
                 </ul>
                 <br />
 
-                 <div class="row">
-                    <div class="col-md-6">
-                         <b>1st Grade Tuition</b>
-                 <ul>
-                     <li>The registration Fee: $100</li>
-                     <li>The T-shirt Fee: $10</li>
-                    <li>The books Fee: $15</li>
-                </ul>
-             
-                <b>2nd Grade Tuition</b>
-                 <ul>
-                     <li>The registration Fee: $110</li>
-                     <li>The T-shirt Fee: $10</li>
-                    <li>The books Fee: $15</li>
-                </ul>
-                 <b>3rd Grade Tuition</b>
-                 <ul>
-                     <li>The registration Fee: $120</li>
-                     <li>The T-shirt Fee: $10</li>
-                    <li>The books Fee: $15</li>
-                </ul>
-                 <b>4th Grade Tuition</b>
-                 <ul>
-                     <li>The registration Fee: $130</li>
-                     <li>The T-shirt Fee: $10</li>
-                    <li>The books Fee: $15</li>
-                </ul>
-                    </div>
-                       <div class="col-md-6">
-                            <b>5th Grade Tuition</b>
-                 <ul>
-                     <li>The registration Fee: $140</li>
-                     <li>The T-shirt Fee: $15</li>
-                    <li>The books Fee: $15</li>
-                </ul>
-                  <b>6th Grade Tuition</b>
-                 <ul>
-                     <li>The registration Fee: $150</li>
-                     <li>The T-shirt Fee: $15</li>
-                    <li>The books Fee: $15</li>
-                </ul>
-                  <b>7th Grade Tuition</b>
-                 <ul>
-                     <li>The registration Fee: $160</li>
-                     <li>The T-shirt Fee: $15</li>
-                    <li>The books Fee: $20</li>
-                </ul>
-                  <b>8th Grade Tuition</b>
-                 <ul>
-                     <li>The registration Fee: $180</li>
-                     <li>The T-shirt Fee: $15</li>
-                    <li>The books Fee: $20</li>
-                </ul>
-                    </div>
-                 </div>
 
-               
-                
-           
+
+            
+                    <asp:datagrid id="dgTuitionFee" runat="server" ToolTip="Document List" Width="100%"
+									                    CellPadding="4" AutoGenerateColumns="False" DataKeyField="level_Id"
+									
+									                   
+                                CellSpacing="1" >
+                    <AlternatingItemStyle Font-Size="10pt" Font-Names="Arial" BackColor="#CCCCCC"></AlternatingItemStyle>
+                    <ItemStyle Font-Size="10pt" Font-Names="Arial" ForeColor="Black"></ItemStyle>
+                    <HeaderStyle Font-Size="10pt" Font-Names="Arial" Font-Bold="True" ForeColor="White" BackColor="#003366"></HeaderStyle>
+                    <Columns>
+
+                    <asp:TemplateColumn HeaderText="Grade">
+                    <ItemTemplate>
+                    <asp:Label runat="server" id="lblDocument_Description" Text='<%# DataBinder.Eval(Container, "DataItem.Level_id") %>'>
+                    </asp:Label>
+                    </ItemTemplate>
+                        <HeaderStyle Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" HorizontalAlign="Center" />
+                        <ItemStyle Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" HorizontalAlign="Center" />
+                    </asp:TemplateColumn>
+
+                    <asp:TemplateColumn HeaderText="Tuition Fee">
+                    <ItemTemplate>
+                    <asp:Label runat="server" id="lblTuitionFee" Text='<%# "$" +DataBinder.Eval(Container, "DataItem.Tuition_Fee") %>'>
+                    </asp:Label>
+                    </ItemTemplate>
+                        <HeaderStyle Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" HorizontalAlign="Center" />
+                        <ItemStyle Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" HorizontalAlign="Center" />
+                    </asp:TemplateColumn>
+
+                    <asp:TemplateColumn HeaderText="T-Shirt Price">
+                    <ItemTemplate>
+                    <asp:Label runat="server" id="lblTShirtPrice" Text='<%# "$" +DataBinder.Eval(Container, "DataItem.T-Shirt_Price") %>'>
+                    </asp:Label>
+                    </ItemTemplate>
+                        <HeaderStyle Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" HorizontalAlign="Center" />
+                        <ItemStyle Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" HorizontalAlign="Center" />
+                    </asp:TemplateColumn>
+
+                     <asp:TemplateColumn HeaderText="Book Price">
+                    <ItemTemplate>
+                    <asp:Label runat="server" id="lblBookPrice" Text='<%# "$" +DataBinder.Eval(Container, "DataItem.Book_Price") %>'>
+                    </asp:Label>
+                    </ItemTemplate>
+                         <HeaderStyle Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" HorizontalAlign="Center" />
+                         <ItemStyle Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" HorizontalAlign="Center" />
+                    </asp:TemplateColumn>
+                    </Columns>
+                    </asp:datagrid>
+                    <br />
+
+
           
         </div>
     </div>

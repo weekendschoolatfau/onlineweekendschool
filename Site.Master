@@ -38,24 +38,21 @@
             </Scripts>
         </asp:ScriptManager>
 
-        <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar navbar-custom  navbar-fixed-top ">
             <div class="container">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <button type="button" class="navbar-toggle  menu-text" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" runat="server" href="~/">Online Weekend School</a>
+                    <a class="navbar-brand menu-text" runat="server" href="~/">Online Weekend School</a>
                 </div>
                 <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">Home</a></li>
-                        <li><a runat="server" href="~/About">About</a></li>
-                        <li><a runat="server" href="~/Contact">Contact</a></li>
-                        <li><a runat="server" href="~/Location">Location</a></li>
-                         <li><a runat="server" href="~/Login">Login</a></li>
-                    </ul>
+                     <ul class="nav navbar-nav">
+                        <asp:Literal ID="menu" runat="server"/>
+                      </ul>
+                   
                 </div>
             </div>
         </div>
