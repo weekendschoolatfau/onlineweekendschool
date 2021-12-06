@@ -7,7 +7,7 @@
               <div class="col">
               </div>
               <div class="col">
-                  <div class="loginPage  rounded">
+                  <div class="loginPage  rounded" align="left">
                     <h4 class="form-signin-heading">  New User <span class="requiredMessage"> (* Required Field)</span></h4>
                      
                     <div class="loginMargin">

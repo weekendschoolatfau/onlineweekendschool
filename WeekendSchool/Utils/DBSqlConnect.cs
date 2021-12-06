@@ -16,8 +16,8 @@ namespace onlineweekendschool.WeekendSchool.Utils
 
         public SqlConnection getSqlConnection()
         {
-            string tppConStr = ConfigurationManager.AppSettings["ConWeekendSchool"]; 
-            SqlConnection dbConn = new SqlConnection(tppConStr);
+            string weekendSchoolConStr = ConfigurationManager.AppSettings["ConWeekendSchool"]; 
+            SqlConnection dbConn = new SqlConnection(weekendSchoolConStr);
             return dbConn;
         }
 

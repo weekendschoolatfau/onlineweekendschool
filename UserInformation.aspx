@@ -189,7 +189,7 @@
             ToolTip="Click on Add Student When You Finish Entering Student Information" />  
 
     &nbsp;&nbsp;
-     <asp:Button ID="btnPrintPayments" runat="server" Text="Print Student Payments" 
+     <asp:Button ID="btnPrintPayments" runat="server" Text="Print Student Payments Receipt" 
             TabIndex="12" 
             ToolTip="Print Student Payments" OnClick="btnPrintPayments_Click" />  
       <%--  &nbsp;<br /><br />
@@ -217,8 +217,101 @@
     
 <script type = "text/javascript">
 
+    function AddNewParent()
+    {
+        var txtUsername = document.getElementById("<%=txtUsername.ClientID%>").value;
 
-    function OpenPDF_Click(pdffile) {
+        if (txtUsername.trim() == "") {
+            alert("Username is required field.");
+            document.getElementById("<%=txtUsername.ClientID%>").focus();
+            return false;
+        }
+
+        var txtParentFirstName = document.getElementById("<%=txtParentFirstName.ClientID%>").value;
+
+        if (txtParentFirstName.trim() == "") {
+            alert("Parent first name is required field.");
+            document.getElementById("<%=txtParentFirstName.ClientID%>").focus();
+            return false;
+        }
+
+        var txtParentLastName = document.getElementById("<%=txtParentLastName.ClientID%>").value;
+
+        if (txtParentLastName.trim() == "") {
+            alert("Parent last name is required field.");
+            document.getElementById("<%=txtParentLastName.ClientID%>").focus();
+            return false;
+        }
+
+        var txtHomePhone1 = document.getElementById("<%=txtHomePhone1.ClientID%>").value;
+
+        if (txtHomePhone1.trim() == "") {
+            alert("Phone Area Code is required field.");
+            document.getElementById("<%=txtHomePhone1.ClientID%>").focus();
+            return false;
+        }
+
+        var txtHomePhone2 = document.getElementById("<%=txtHomePhone2.ClientID%>").value;
+
+        if (txtHomePhone2.trim() == "") {
+            alert("Phone is required field.");
+            document.getElementById("<%=txtHomePhone2.ClientID%>").focus();
+            return false;
+        }
+
+        var txtHomePhone3 = document.getElementById("<%=txtHomePhone3.ClientID%>").value;
+
+        if (txtHomePhone3.trim() == "") {
+            alert("Phone is required field.");
+            document.getElementById("<%=txtHomePhone3.ClientID%>").focus();
+            return false;
+        }
+
+        var txtEmailAddress = document.getElementById("<%=txtEmailAddress.ClientID%>").value;
+
+        if (txtEmailAddress.trim() == "") {
+            alert("Email address is required field.");
+            document.getElementById("<%=txtEmailAddress.ClientID%>").focus();
+             return false;
+         }
+
+        return true;
+    }
+
+
+    function AddNewStudent()
+    {
+        var txtFirstName = document.getElementById("<%=txtStudentFirstName.ClientID%>").value;
+
+        if (txtFirstName.trim() == "") {
+            alert("First name is required field.");
+            document.getElementById("<%=txtStudentFirstName.ClientID%>").focus();
+            return false;
+        }
+
+        var sel = document.getElementById("<%=ddlAddStudentAge.ClientID%>").value;
+        if (sel == 0) {
+            alert("Student age is required field");
+            document.getElementById("<%=ddlAddStudentAge.ClientID%>").focus();
+
+            return false;
+        }
+
+        sel = document.getElementById("<%=ddbAddStudentLevel.ClientID%>").value;
+        if (sel == 0) {
+            alert("Student level is required field");
+            document.getElementById("<%=ddbAddStudentLevel.ClientID%>").focus();
+
+            return false;
+        }
+
+
+        return true;
+
+
+    }
+
+    function OpenPdfFile(pdffile) {
 
         window.open('../files/' + pdffile, 'PaymentForm', 'width=750,height=350,resizable=yes');
 

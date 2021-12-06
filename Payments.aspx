@@ -8,11 +8,11 @@
     Payments<span class="requiredMessage"> ( * Required Field)</span></div> </td>
 
 </tr>
-<tr>
+<%--<tr>
 <td  colspan="2" > <div class="AccountSubTitle">
     <asp:Label ID="lblSemester" runat="server" ></asp:Label></div> </td>
 
-</tr>
+</tr>--%>
 
 <tr>
 <td  class="TblLabelRight">Student Name:</td><td >

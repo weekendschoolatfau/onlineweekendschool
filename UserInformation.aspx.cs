@@ -35,7 +35,13 @@ namespace onlineweekendschool
                 ErrorParentMessage(false, "");
 
                 titleMsg.InnerText = "Student Registration Year 2021 / 2022";
+
+               
             }
+
+            btnUpdateParentInformation.Attributes.Add("OnClick", "return AddNewParent();");
+
+            btnAddNewStudent.Attributes.Add("OnClick", "return AddNewStudent();");
         }
 
         protected void ErrorParentMessage(bool isVisible, string message)
@@ -393,7 +399,8 @@ namespace onlineweekendschool
             this.dvFinace1 = (DataView)Session["DvFinace1"];
 
             string fileName = regObj.generatePDFfile(parentObj);//, studentObj, financeObj1);
-            Page.ClientScript.RegisterStartupScript(this.GetType(), "alert", "OpenPDF_Click('" + fileName + "');", true);
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "alert", "OpenPdfFile('" + fileName + "');", true);
+
         }
     }
 }

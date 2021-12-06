@@ -10,13 +10,14 @@
               <div class="col">
                   <div class="loginPage  rounded">
                     <div class="loginMargin">
+                        <div align="left">
                          <h4 class="form-signin-heading"> Login <span class="requiredMessage"> (* Required Field)</span></h4>
                         <label for="txtUsername" class="form-signin-heading loginSeparation"> Username or Email<span class="requiredMessage"> *</span></label>
-                        <asp:TextBox ID="txtUsername" runat="server" CssClass="form-control"  value="azerrouki"  placeholder="Enter Username or Email" />
+                        <asp:TextBox ID="txtUsername" runat="server" CssClass="form-control"  value=""  placeholder="Enter Username or Email" />
                       
 
                         <label for="txtPassword" class="form-signin-heading loginSeparation">Password<span class="requiredMessage"> *</span></label>
-                        <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" value="abdellah" CssClass="form-control" placeholder="Enter Password"  />
+                        <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" value="" CssClass="form-control" placeholder="Enter Password"  />
      
                       <br />
 
@@ -33,6 +34,7 @@
                         <div id="dvMessage"  runat="server"   class="alert alert-danger">
                             <strong>Error!</strong>
                             <asp:Label ID="lblMessage" runat="server"  />
+                        </div>
                         </div>
                      </div>
                   </div>

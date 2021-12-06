@@ -57,10 +57,10 @@ namespace onlineweekendschool
             DateTime dt = DateTime.Now;
             int month = dt.Month;
 
-            if (month>= 0 && month <=6)
-                lblSemester.Text = "2nd Semester Payment";
-            else
-                lblSemester.Text = "1st Semester Payment";
+            //if (month>= 0 && month <=6)
+            //    lblSemester.Text = "2nd Semester Payment";
+            //else
+            //    lblSemester.Text = "1st Semester Payment";
 
             btnProcessPayment.Attributes.Add("OnClick", "return StudentPayment();");
 

@@ -15,13 +15,11 @@ namespace onlineweekendschool.WeekendSchool.Utils
         public static string getMachineName()
         {
             string MachineName = System.Environment.MachineName;
-            if (MachineName.Trim().ToUpper().Equals("SVINTRANET3"))
+            if (MachineName.Trim().ToUpper().Equals("DESKTOP-EA011RJ"))
                 MachineName = "http://" + MachineName.Trim().ToLower() + ".bcpa.local";
-            else if (MachineName.Trim().ToUpper().Equals("SVWEBSTAGING"))
-                MachineName = "https://" + MachineName.Trim().ToLower() + ".bcpa.net";
-            else if (MachineName.Trim().ToUpper().Equals("IT6127DTTR"))
-                MachineName = "http://localhost";
-            else
+            else if (MachineName.Trim().ToUpper().Equals("CLOUD"))
+                MachineName = "https://" + MachineName.Trim().ToLower() ;
+            else 
                 MachineName = "http://localhost";
 
             return MachineName;
@@ -38,15 +36,9 @@ namespace onlineweekendschool.WeekendSchool.Utils
 
 
 
-            fileFullPath = @"C:\PDF\";
-            if (!Directory.Exists(fileFullPath))
-            {
-                Directory.CreateDirectory(fileFullPath);
-            }
-
             string MachineName = System.Environment.MachineName;
-            if (MachineName.Trim().ToUpper().Equals("SVINTRANET3"))
-                fileFullPath = @"\\svfile07\TPP_online_web\Excel\";
+            if (MachineName.Trim().ToUpper().Equals("DESKTOP-EA011RJ"))
+                fileFullPath = @"C:\wwwroot\inetpub\onlineweekendschool\files\";
 
 
             return fileFullPath;

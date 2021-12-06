@@ -895,7 +895,9 @@ namespace onlineweekendschool.WeekendSchool.DS
                 prmTotalAmountPayed.Direction = ParameterDirection.Input;
                 prmTotalAmountPayed.Value = paymentObj.TotalPaymentPayed;
 
-                
+                SqlParameter prmCheckNumber = cmdOwners.Parameters.Add("p_checknumber", SqlDbType.VarChar, 50);
+                prmCheckNumber.Direction = ParameterDirection.Input;
+                prmCheckNumber.Value = "";
 
 
                 cmdOwners.ExecuteReader();
